@@ -50,7 +50,7 @@ recoding_educ_2002 <- data.frame(
 "Don't know",
 "Do not know",
 "Unspecified"),
-    new_value = c("0", "0", "1", "1", "2", "2", "3", "3", "4", "5", "5", "6", "7", "7", "8", "9", "9", "10", "10", "11", "11", "12", "12", "10", "10", "10", "11", "11", "11", "11", "13", "13", "13", "11", "11", "11", "13", "14", "13", "15", "15", "15", "16", "16", "17", "18", "NA", "NA", "NA", "NA")
+    new_value = c("0", "0", "1", "1", "2", "2", "3", "3", "4", "5", "5", "6", "7", "7", "8", "9", "9", "10", "10", "11", "11", "12", "12", "10", "10", "10", "11", "11", "11", "11", "13", "13", "13", "11", "11", "11", "13", "13", "13", "15", "15", "15", "16", "16", "17", "18", "NA", "NA", "NA", "NA")
 )
 
 #> 2003 ----
@@ -147,7 +147,7 @@ recoding_educ_2003 <- data.frame(
                   "11",
                   "13",
                   "13",
-                  "14",
+                  "13",
                   "13",
                   "15",
                   "15",
@@ -277,7 +277,7 @@ recoding_educ_2004 <- data.frame(
                   "11",
                   "13",
                   "13",
-                  "14",
+                  "13",
                   "13",
                   "15",
                   "15",
@@ -420,8 +420,8 @@ recoding_educ_2005 <- data.frame(
                   "11",
                   "13",
                   "13",
-                  "12",
-                  "14",
+                  "13",
+                  "13",
                   "13",
                   "15",
                   "15",
@@ -569,8 +569,8 @@ recoding_educ_2006 <- data.frame(
                   "11",
                   "13",
                   "13",
-                  "12",
-                  "14",
+                  "13",
+                  "13",
                   "13",
                   "15",
                   "15",
@@ -614,14 +614,14 @@ recoding_educ_2006 <- data.frame(
 
 recoding_educ_2007 <- data.frame(
     old_value = c("No schooling", "Grade R / 0", "Grade 1/Sub A/Class 1", "Sub A/Grade 1", "Grade 1 / Sub A", "Grade 2/Sub B/Class 2", "Sub B/Grade 2", "Grade 2 / Sub B", "Grade 3/Standard 1/ABET/AET 1", "Grade 3 / Standard 1", "Grade 4 / Standard 2", "Grade 5/Standard 3/ABET/AET 2", "Grade 5 / Standard 3", "Grade 6 / Standard 4", "Grade 7 / Standard 5", "Grade 7/Standard 5/ABET/AET 3", "Grade 8 / Standard 6 / Form 1", "Grade 9 / Standard 7 / Form 2", "Grade 9/Standard 7/Form 2/ABET/AET 4/NCV Level 1/Occupational Certificate-NQF Level 1", "Grade 10/Standard 8/Form 3/NCV Level 2/Occupational Certificate-NQF Level 2", "Grade 10 / Standard 8 / Form 3", "Grade 11 / Standard 9 / Form 4", "Grade 11/Standard 9/Form 4/NCV Level 3/Occupational Certificate-NQF Level 3", "Grade 12/Standard 10/Form 5/National Senior Certificate/Matric/ NCV Level 4/Occupational Certificate-NQF Level 4", "Grade 12 / Standard 10 / Form 5/Matric", "NTC I", "NTC l", "NTC I/N1", "NTC II", "NTC II/N2", "NTC III", "NTC III/N3", "N4/NTC 4/Occupational Certificate-NQF Level 5", "N5/NTC 5/Occupational Certificate-NQF Level 5", "N6/NTC 6/Occupational Certificate-NQF Level 5", "Diploma/certificate with less than Grade 12/Std 10", "Diploma with less than Grade 12 / Std 10", "Diploma with less than Grade 12/Standard 10", "Certificate with less than Grade 12/Standard 10", "Diploma/certificate with Grade 12/Std 10", "Certificate with Grade 12 / Std 10", "Diploma with Grade 12 / Std 10", "Diploma with Grade 12/Standard 10/Occupational Certificate-NQF Level 6", "Higher/National/Advance certificate with Grade 12/Std 10/Occupational Certificate-NQF Level 5", "Higher Diploma/Occupational Certificate (B-Tech Diploma)-NQF Level 7", "Degree", "Bachelors Degree/Occupational Certificate-NQF Level 7", "Postgraduate degree or diploma", "Honours Degree/Postgraduate Diploma/Occupational Certificate-NQF Level 8", "Post Higher Diploma (Masters Diploma and Masters Degree)-NQF Level 9", "Doctoral Degrees (Doctoral Diploma and PhD)-NQF Level 10", "Other", "Don't know", "Do not know", "Unspecified", "Honours Degree", "Certificate with less than grade 12/STD 10", "Bachelors Degree", "Bachelors Degree and Diploma", "Higher Degree (Masters, Doctorate)", "Diploma with less than grade 12 / STD 10", "Diploma / certificate with less than Grade 12 / Std 10", "Certificate with grade 12 / STD 10", "Diploma with grade 12 / STD 10", "Grade 7/Standard 5", "Grade 12/Standard 10/Form 5/Matric", "Grade 8/Standard 6/Form 1", "Grade 9/Standard 7/Form 2", "Diploma with grade 12/STD 10", "Grade 6/Standard 4", "Certificate with grade 12/STD 10", "Grade 10/Standard 8/Form 3", "Grade 3/Standard 1", "Grade 4/Standard 2", "Grade 11/Standard 9/Form 4", "Grade 5/Standard 3", "Diploma with less than grade 12/STD 10", "Bachelor's Degree", "Bachelor's Degree and Diploma", "Grade R/0"),
-    new_value = c("0", "0", "1", "1", "1", "2", "2", "2", "3", "3", "4", "5", "5", "6", "7", "7", "8", "9", "9", "10", "10", "11", "11", "12", "12", "10", "10", "10", "11", "11", "11", "11", "13", "13", "13", "11", "11", "11", "11", "13", "13", "12", "14", "13", "15", "15", "15", "16", "16", "17", "18", "NA", "NA", "NA", "NA", "16", "11", "15", "16", "17", "11", "11", "13", "13", "7", "12", "8", "9", "13", "6", "13", "10", "3", "4", "11", "5", "11", "15", "16", "0")
+    new_value = c("0", "0", "1", "1", "1", "2", "2", "2", "3", "3", "4", "5", "5", "6", "7", "7", "8", "9", "9", "10", "10", "11", "11", "12", "12", "10", "10", "10", "11", "11", "11", "11", "13", "13", "13", "11", "11", "11", "11", "13", "13", "13", "13", "13", "15", "15", "15", "16", "16", "17", "18", "NA", "NA", "NA", "NA", "16", "11", "15", "16", "17", "11", "11", "13", "13", "7", "12", "8", "9", "13", "6", "13", "10", "3", "4", "11", "5", "11", "15", "16", "0")
 )
 
 #> 2008 ----
 
 recoding_educ_2008 <- data.frame(
     old_value = c("No schooling", "Grade R / 0", "Grade 1/Sub A/Class 1", "Sub A/Grade 1", "Grade 1 / Sub A", "Grade 2/Sub B/Class 2", "Sub B/Grade 2", "Grade 2 / Sub B", "Grade 3/Standard 1/ABET/AET 1", "Grade 3 / Standard 1", "Grade 4 / Standard 2", "Grade 5/Standard 3/ABET/AET 2", "Grade 5 / Standard 3", "Grade 6 / Standard 4", "Grade 7 / Standard 5", "Grade 7/Standard 5/ABET/AET 3", "Grade 8 / Standard 6 / Form 1", "Grade 9 / Standard 7 / Form 2", "Grade 9/Standard 7/Form 2/ABET/AET 4/NCV Level 1/Occupational Certificate-NQF Level 1", "Grade 10/Standard 8/Form 3/NCV Level 2/Occupational Certificate-NQF Level 2", "Grade 10 / Standard 8 / Form 3", "Grade 11 / Standard 9 / Form 4", "Grade 11/Standard 9/Form 4/NCV Level 3/Occupational Certificate-NQF Level 3", "Grade 12/Standard 10/Form 5/National Senior Certificate/Matric/ NCV Level 4/Occupational Certificate-NQF Level 4", "Grade 12 / Standard 10 / Form 5/Matric", "NTC I", "NTC l", "NTC I/N1", "NTC II", "NTC II/N2", "NTC III", "NTC III/N3", "N4/NTC 4/Occupational Certificate-NQF Level 5", "N5/NTC 5/Occupational Certificate-NQF Level 5", "N6/NTC 6/Occupational Certificate-NQF Level 5", "Diploma/certificate with less than Grade 12/Std 10", "Diploma with less than Grade 12 / Std 10", "Diploma with less than Grade 12/Standard 10", "Certificate with less than Grade 12/Standard 10", "Diploma/certificate with Grade 12/Std 10", "Certificate with Grade 12 / Std 10", "Diploma with Grade 12 / Std 10", "Diploma with Grade 12/Standard 10/Occupational Certificate-NQF Level 6", "Higher/National/Advance certificate with Grade 12/Std 10/Occupational Certificate-NQF Level 5", "Higher Diploma/Occupational Certificate (B-Tech Diploma)-NQF Level 7", "Degree", "Bachelors Degree/Occupational Certificate-NQF Level 7", "Postgraduate degree or diploma", "Honours Degree/Postgraduate Diploma/Occupational Certificate-NQF Level 8", "Post Higher Diploma (Masters Diploma and Masters Degree)-NQF Level 9", "Doctoral Degrees (Doctoral Diploma and PhD)-NQF Level 10", "Other", "Don't know", "Do not know", "Unspecified", "Honours Degree", "Certificate with less than grade 12/STD 10", "Bachelors Degree", "Bachelors Degree and Diploma", "Higher Degree (Masters, Doctorate)", "Diploma with less than grade 12 / STD 10", "Diploma / certificate with less than Grade 12 / Std 10", "Certificate with grade 12 / STD 10", "Diploma with grade 12 / STD 10", "Grade 7/Standard 5", "Grade 12/Standard 10/Form 5/Matric", "Grade 8/Standard 6/Form 1", "Grade 9/Standard 7/Form 2", "Diploma with grade 12/STD 10", "Grade 6/Standard 4", "Certificate with grade 12/STD 10", "Grade 10/Standard 8/Form 3", "Grade 3/Standard 1", "Grade 4/Standard 2", "Grade 11/Standard 9/Form 4", "Grade 5/Standard 3", "Diploma with less than grade 12/STD 10", "Bachelor's Degree", "Bachelor's Degree and Diploma", "Grade R/0"),
-    new_value = c("0", "0", "1", "1", "1", "2", "2", "2", "3", "3", "4", "5", "5", "6", "7", "7", "8", "9", "9", "10", "10", "11", "11", "12", "12", "10", "10", "10", "11", "11", "11", "11", "13", "13", "13", "11", "11", "11", "11", "13", "13", "12", "14", "13", "15", "15", "15", "16", "16", "17", "18", "NA", "NA", "NA", "NA", "16", "11", "15", "16", "17", "11", "11", "13", "13", "7", "12", "8", "9", "13", "6", "13", "10", "3", "4", "11", "5", "11", "15", "16", "0"
+    new_value = c("0", "0", "1", "1", "1", "2", "2", "2", "3", "3", "4", "5", "5", "6", "7", "7", "8", "9", "9", "10", "10", "11", "11", "12", "12", "10", "10", "10", "11", "11", "11", "11", "13", "13", "13", "11", "11", "11", "11", "13", "13", "13", "13", "13", "15", "15", "15", "16", "16", "17", "18", "NA", "NA", "NA", "NA", "16", "11", "15", "16", "17", "11", "11", "13", "13", "7", "12", "8", "9", "13", "6", "13", "10", "3", "4", "11", "5", "11", "15", "16", "0"
 
     )
 )
@@ -783,7 +783,6 @@ recoding_educ_2011 <- data.frame(
     new_value = c("11", "9", "6", "2", "13", "12", "8", "13", "11", "16", "0", "5", "10", "4", "7", "3", "15", "15", "12", "NA", "11", "1", "11", "13", "10", "NA", "17", "NA", "16", "13", "17", "0", "11", "13", "5", "9", "4", "15", "3", "2", "10", "7", "11", "10", "16", "1", "17", "18", "11", "NA")
 )
 
-##CHECK THE 2006-2011 EDUCTAION LEVELS. DO THEY MATCH UP?
 
 #> 2012 ----
 recoding_educ_2012 <- data.frame(
@@ -796,7 +795,7 @@ recoding_educ_2012 <- data.frame(
 
 recoding_educ_2013 <- data.frame(
     old_value = c("NTC 3/ N3/NC (V)/Level 4", "Grade 9/Standard 7/Form 2/AET 4", "Grade 6/Standard 4", "Grade 2/Sub B/Class 2", "N6/NTC 6", "Grade 12/Standard 10/Form 5/Matric (No Exemption)", "Grade 8/Standard 6/Form 1", "Diploma with Grade 12/Std 10", "Grade 11/Standard 9/ Form 4", "Bachelor's Degree and post-graduate diploma", "No schooling", "Grade 5/Standard 3/AET 2", "Grade 10/Standard 8/ Form 3", "Grade 4/Standard 2", "Grade 7/Standard 5/AET 3", "Grade 3/Standard 1/AET 1(Kha Ri Gude, Sanli)", "Bachelor's Degree", "Higher Diploma (Technikon/University of Technology)", "Grade 12/Standard 10/Form 5/Matric (Exemption *)", "Do not know", "Diploma with less than Grade 12/Std 10", "Grade 1/Sub A/Class 1", "Certificate with less than Grade 12/Std 10", "Certificate with Grade 12/Std 10", "NTC 1 N1/NC (V) Level 2", "Unspecified", "Post Higher Diploma (Technikon/University of Technology Masters, Doctoral)", "Other (specify in the box below)", "Honours Degree", "N4/NTC 4", "Higher degree (Masters, Doctorate)", "Grade R/0", "NTC 2/N2/ NC (V) Level 3", "N5/NTC 5"),
-    new_value = c("11", "9", "6", "2", "13", "12", "8", "13", "11", "16", "0", "5", "10", "4", "7", "3", "15", "15", "12", "0", "11", "1", "11", "13", "10", "0", "17", "0", "16", "13", "17", "0", "11", "13")
+    new_value = c("11", "9", "6", "2", "13", "12", "8", "13", "11", "16", "0", "5", "10", "4", "7", "3", "15", "15", "12", "NA", "11", "1", "11", "13", "10", "NA", "17", "NA", "16", "13", "17", "0", "11", "13")
 )
 #> 2014 ----
 recoding_educ_2014 <- data.frame(
@@ -826,16 +825,105 @@ recoding_educ_2018 <- data.frame(
 )
 #> 2019 ----
 recoding_educ_2019 <- data.frame(
-    old_value = c("NTC 3/ N3/NC (V)/Level 4", "Grade 9/Standard 7/Form 2/AET 4", "Grade 6/Standard 4", "Grade 2/Sub B/Class 2", "N6/NTC 6", "Grade 12/Standard 10/Form 5/Matric (No Exemption)", "Grade 8/Standard 6/Form 1", "Diploma with Grade 12/Std 10", "Grade 11/Standard 9/ Form 4", "Bachelor's Degree and post-graduate diploma", "No schooling", "Grade 5/Standard 3/AET 2", "Grade 10/Standard 8/ Form 3", "Grade 4/Standard 2", "Grade 7/Standard 5/AET 3", "Grade 3/Standard 1/AET 1(Kha Ri Gude, Sanli)", "Bachelor's Degree", "Higher Diploma (Technikon/University of Technology)", "Grade 12/Standard 10/Form 5/Matric (Exemption *)", "Do not know", "Diploma with less than Grade 12/Std 10", "Grade 1/Sub A/Class 1", "Certificate with less than Grade 12/Std 10", "Certificate with Grade 12/Std 10", "NTC 1 N1/NC (V) Level 2", "Unspecified", "Post Higher Diploma (Technikon/University of Technology Masters, Doctoral)", "Other (specify in the box below)", "Honours Degree", "N4/NTC 4", "Higher degree (Masters, Doctorate)", "Grade R/0", "NTC 2/N2/ NC (V) Level 3", "N5/NTC 5", "Grade 5/ Standard 3/ABET 2", "Grade 9/Standard 7/Form 2/ABET 4", "Grade 4/ Standard 2", "Bachelors Degree", "Grade 3/Standard 1/ABET 1(Kha Ri Gude; Sanli)", "Grade 2 / Sub B/Class 2", "Grade 10/ Standard 8/ Form 3", "Grade 7/Standard 5/ABET 3", "Grade 11/ Standard 9/ Form 4", "NTC 1/ N1/NC (V) Level 2", "Bachelors Degree and post-graduate diploma", "Grade 1/ Sub A/Class 1", "Post Higher Diploma (Technikon/University of Technology Masters; Doctoral)", "Higher degree (Masters; Doctorate)", "NTC 2/ N2/ NC (V) Level 3", "Other", "Grade 10/Standard 8/Form 3/NCV Level 2/Occupational Certificate – NQF Level 2", "Grade 7/Standard 5/ABET/AET 3", "Grade 12/Standard 10/Form 5/National Senior Certificate/Matric/ NCV Level 4/Occupational Certificate – NQF Level 4", "Grade 9/Standard 7/Form 2/ABET/AET 4/NCV Level 1/Occupational Certificate – NQF Level 1", "Bachelor’s Degree/Occupational Certificate – NQF Level 7", "N6/NTC 6/Occupational Certificate – NQF Level 5", "NTC lll/N3/NQF 3", "Grade 11/Standard 9/Form 4/NCV Level 3/Occupational Certificate – NQF Level 3", "NTC l/N1/NQF 1", "Grade 5/Standard 3/ABET/AET 2", "Diploma with Grade 12/Standard 10/Occupational Certificate – NQF Level 6", "Honours Degree/Postgraduate Diploma/Occupational Certificate – NQF Level 8", "N4/NTC 4/Occupational Certificate – NQF Level 5", "Certificate with less than Grade 12/Standard 10", "Grade 3/Standard 1/ABET/AET 1", "DO NOT KNOW", "Higher/National/Advance certificate with Grade 12/Std 10/Occupational Certificate – NQF Level 5", "Higher Diploma/Occupational Certificate (B-Tech Diploma) – NQF Level 7", "Post Higher Diploma (M-Tech and Master's Degree) – NQF Level 9", "Diploma with less than Grade 12/Standard 10", "N5/NTC 5/Occupational Certificate – NQF Level 5", "NTC ll/N2/NQF 2", "Doctoral Degrees (D-Tech and PhD) – NQF Level 10"),
-    new_value = c(11, 9, 6, 2, 13, 12, 8, 13, 11, 16, 0, 5, 10, 4, 7, 3, 15, 15, 12, NA, 11, 1, 11, 13, 10, NA, 17, NA, 16, 18, 0, 11, 11, 5, 9, 4, 15, 3, 2, 10, 7, 11, 10, 16, 1, 17, 18, 11, NA, 10, 7, 12, 9, 15, 13, 11, 11, 10, 13, 16, 13, 11, 3, NA, 13, 15, 17, 11, 13, 11, 18)
+    old_value = c("Grade 12/Standard 10/Form 5/National Senior Certificate/Matric/ NCV Level 4/Occupational Certificate - NQF Level 4",
+                  "Grade 10/Standard 8/Form 3/NCV Level 2/Occupational Certificate - NQF Level 2",
+                  "No schooling",
+                  "Grade 8/Standard 6/Form 1",
+                  "Grade 2/Sub B/Class 2",
+                  "Grade 7/Standard 5/ABET/AET 3",
+                  "Higher Diploma/Occupational Certificate (B-Tech Diploma) - NQF Level 7",
+                  "Diploma with Grade 12/Standard 10/Occupational Certificate - NQF Level 6",
+                  "Grade 5/Standard 3/ABET/AET 2",
+                  "Grade 4/Standard 2",
+                  "Grade 11/Standard 9/Form 4/NCV Level 3/Occupational Certificate - NQF Level 3",
+                  "Grade R/0",
+                  "Certificate with less than Grade 12/Standard 10",
+                  "Bachelor's Degree/Occupational Certificate - NQF Level 7",
+                  "Grade 6/Standard 4",
+                  "Grade 9/Standard 7/Form 2/ABET/AET 4/NCV Level 1/Occupational Certificate - NQF Level 1",
+                  "Grade 1/Sub A/Class 1",
+                  "Grade 3/Standard 1/ABET/AET 1",
+                  "N6/NTC 6/Occupational Certificate - NQF Level 5",
+                  "N4/NTC 4/Occupational Certificate - NQF Level 5",
+                  "NTC lll/N3/NQF 3",
+                  "Doctoral Degrees (D-Tech and PhD) - NQF Level 10",
+                  "NTC l/N1/NQF 1",
+                  "Higher/National/Advance certificate with Grade 12/Std 10/Occupational Certificate - NQF Level 5",
+                  "Honours Degree/Postgraduate Diploma/Occupational Certificate - NQF Level 8",
+                  "Unspecified",
+                  "Other",
+                  "Diploma with less than Grade 12/Standard 10",
+                  "Post Higher Diploma (M-Tech and Master's Degree) - NQF Level 9",
+                  "DO NOT KNOW",
+                  "N5/NTC 5/Occupational Certificate - NQF Level 5",
+                  "NTC ll/N2/NQF 2"),
+    new_value = c(12, 10, 0, 8, 2, 7, 15, 13, 5, 4, 11, 0, 11, 15, 6, 9, 1, 3, 13, 13, 11, 18, 10, 13, 16, NA, NA, 11, 17, NA, 13, 11)
 )
 #> 2020 ----
 recoding_educ_2020 <- data.frame(
-    old_value = c(),
-    new_value = c()
+    old_value = c("Grade 12/Standard 10/Form 5/National Senior Certificate/Matric/ NCV Level 4/Occupational Certificate – NQF Level 4",
+                  "Grade 9/Standard 7/Form 2/ABET/AET 4/NCV Level 1/Occupational Certificate – NQF Level 1",
+                  "Grade 7/Standard 5/ABET/AET 3",
+                  "Grade 10/Standard 8/Form 3/NCV Level 2/Occupational Certificate – NQF Level 2",
+                  "Bachelor’s Degree/Occupational Certificate – NQF Level 7",
+                  "Diploma with Grade 12/Standard 10/Occupational Certificate – NQF Level 6",
+                  "Grade 4/Standard 2",
+                  "Grade 5/Standard 3/ABET/AET 2",
+                  "Grade 11/Standard 9/Form 4/NCV Level 3/Occupational Certificate – NQF Level 3",
+                  "Grade 6/Standard 4",
+                  "Grade 8/Standard 6/Form 1",
+                  "No schooling",
+                  "Grade 3/Standard 1/ABET/AET 1",
+                  "Higher Diploma/Occupational Certificate (B-Tech Diploma) – NQF Level 7",
+                  "N6/NTC 6/Occupational Certificate – NQF Level 5",
+                  "DO NOT KNOW",
+                  "Higher/National/Advance certificate with Grade 12/Std 10/Occupational Certificate – NQF Level 5",
+                  "Honours Degree/Postgraduate Diploma/Occupational Certificate – NQF Level 8",
+                  "N5/NTC 5/Occupational Certificate – NQF Level 5",
+                  "Doctoral Degrees (D-Tech and PhD) – NQF Level 10",
+                  "Other",
+                  "Grade 2/Sub B/Class 2",
+                  "Certificate with less than Grade 12/Standard 10",
+                  "N4/NTC 4/Occupational Certificate – NQF Level 5",
+                  "Grade 1/Sub A/Class 1",
+                  "NTC lll/N3/NQF 3",
+                  "Post Higher Diploma (M-Tech and Master's Degree) – NQF Level 9",
+                  "NTC ll/N2/NQF 2",
+                  "Diploma with less than Grade 12/Standard 10"),
+    new_value = c("12", "9", "7", "10", "15", "13", "4", "5", "11", "6", "8", "0", "3", "15", "13", "NA", "13", "16", "13", "18", "NA", "2", "11", "13", "1", "11", "17", "11", "11")
 )
 #> 2021 ----
 recoding_educ_2021 <- data.frame(
-    old_value = c(),
-    new_value = c()
+    old_value = c("Grade 12/Standard 10/Form 5/National Senior Certificate/Matric/ NCV Level 4/Occupational Certificate – NQF Level 4",
+                  "Grade 9/Standard 7/Form 2/ABET/AET 4/NCV Level 1/Occupational Certificate – NQF Level 1",
+                  "Grade 7/Standard 5/ABET/AET 3",
+                  "Grade 10/Standard 8/Form 3/NCV Level 2/Occupational Certificate – NQF Level 2",
+                  "Bachelor’s Degree/Occupational Certificate – NQF Level 7",
+                  "Diploma with Grade 12/Standard 10/Occupational Certificate – NQF Level 6",
+                  "Grade 4/Standard 2",
+                  "Grade 5/Standard 3/ABET/AET 2",
+                  "Grade 11/Standard 9/Form 4/NCV Level 3/Occupational Certificate – NQF Level 3",
+                  "Grade 6/Standard 4",
+                  "Grade 8/Standard 6/Form 1",
+                  "No schooling",
+                  "Grade 3/Standard 1/ABET/AET 1",
+                  "Higher Diploma/Occupational Certificate (B-Tech Diploma) – NQF Level 7",
+                  "N6/NTC 6/Occupational Certificate – NQF Level 5",
+                  "DO NOT KNOW",
+                  "Higher/National/Advance certificate with Grade 12/Std 10/Occupational Certificate – NQF Level 5",
+                  "Honours Degree/Postgraduate Diploma/Occupational Certificate – NQF Level 8",
+                  "N5/NTC 5/Occupational Certificate – NQF Level 5",
+                  "Doctoral Degrees (D-Tech and PhD) – NQF Level 10",
+                  "Other",
+                  "Grade 2/Sub B/Class 2",
+                  "Certificate with less than Grade 12/Standard 10",
+                  "N4/NTC 4/Occupational Certificate – NQF Level 5",
+                  "Grade 1/Sub A/Class 1",
+                  "NTC lll/N3/NQF 3",
+                  "Post Higher Diploma (M-Tech and Master's Degree) – NQF Level 9",
+                  "NTC ll/N2/NQF 2",
+                  "Diploma with less than Grade 12/Standard 10",
+                  "Grade R/0",
+                  "NTC l/N1/NQF 1"),
+    new_value = c("12", "9", "7", "10", "15", "13", "4", "5", "11", "6", "8", "0", "3", "15", "13", "NA", "13", "16", "13", "18", "NA", "2", "11", "13", "1", "11", "17", "11", "11", "0", "10")
 )
