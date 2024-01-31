@@ -18,141 +18,141 @@ library(dplyr)
 # LOAD DATA ====
 
 #> 2002 data ----
-worker_2002 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2002_data/ghs-2002-worker-v1.3.csv", header = TRUE) %>% rename_with(tolower) %>%
+worker_2002 <- read.csv("data/raw/ghs_2002_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q27salto) %>%
     mutate(salperiod = q28salpe) %>%
     mutate(incomecategory = q29salca)
 
-person_2002 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2002_data/ghs-2002-person-v1.3.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2002 <- read.csv("data/raw/ghs_2002_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q110hied)
 
 #> 2003 data ----
-worker_2003 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2003_data/ghs-2003-worker-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+worker_2003 <- read.csv("data/raw/ghs_2003_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q28salto) %>%
     mutate(salperiod = q29salpe) %>%
     mutate(incomecategory = q210salc)
 
-person_2003 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2003_data/ghs-2003-person-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2003 <- read.csv("data/raw/ghs_2003_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q110hied)
 
 #> 2004 data ----
-worker_2004 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2004_data/ghs-2004-worker-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+worker_2004 <- read.csv("data/raw/ghs_2004_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q28salto) %>%
     mutate(salperiod = q29salpe) %>%
     mutate(incomecategory = q210salc)
 
-person_2004 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2004_data/ghs-2004-person-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2004 <- read.csv("data/raw/ghs_2004_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q19hiedu) %>%
     mutate(age = as.numeric(age))
 
 #> 2005 data ----
-worker_2005 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2005_data/ghs-2005-worker-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+worker_2005 <- read.csv("data/raw/ghs_2005_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q29salto) %>%
     mutate(salperiod = q210salp) %>%
     mutate(incomecategory = q211salc)
 
-person_2005 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2005_data/ghs-2005-person-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2005 <- read.csv("data/raw/ghs_2005_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q19hiedu)
 
 #> 2006 data ----
-worker_2006 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2006_data/ghs-2006-worker-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+worker_2006 <- read.csv("data/raw/ghs_2006_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q29salto) %>%
     mutate(salperiod = q210salp) %>%
     mutate(incomecategory = q211salc)
 
-person_2006 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2006_data/ghs-2006-person-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2006 <- read.csv("data/raw/ghs_2006_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q19hiedu)
 
 #> 2007 data ----
-worker_2007 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2007_data/ghs-2007-worker-v1.4.csv", header = TRUE) %>% rename_with(tolower)%>%
+worker_2007 <- read.csv("data/raw/ghs_2007_worker.csv", header = TRUE) %>% rename_with(tolower)%>%
     mutate(salary = q29salto) %>%
     mutate(salperiod = q210salp) %>%
     mutate(incomecategory = q211salc)
 
-person_2007 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2007_data/ghs-2007-person-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2007 <- read.csv("data/raw/ghs_2007_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q19hiedu)
 
 #> 2008 data ----
-worker_2008 <- read_csv("data/raw/ghs_2008_data/ghs-2008-worker-v1.4.csv", col_types = cols(Age_grp = col_skip())) %>% rename_with(tolower) %>%
+worker_2008 <- read_csv("data/raw/ghs_2008_worker.csv", col_types = cols(Age_grp = col_skip())) %>% rename_with(tolower) %>%
     mutate(salary = q29salto) %>%
     mutate(salperiod = q210salp) %>%
     mutate(incomecategory = q211salc)
 
-person_2008 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2008_data/ghs-2008-person-v1.4.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2008 <- read.csv("data/raw/ghs_2008_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q19hiedu)
 
 #> 2009 data ----
-person_2009 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2009_data/GHS2009Person.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2009 <- read.csv("data/raw/ghs_2009_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q141asto) %>%
     mutate(salperiod = q141bsp) %>%
     mutate(educvar = q16hiedu)%>%
     mutate(incomecategory = q142salc)
 
 #> 2010 data ----
-person_2010 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2010_data/zaf-statssa-ghs-2010-person-v2.2.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2010 <- read.csv("data/raw/ghs_2010_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q22asto) %>%
     mutate(salperiod = q22bsp) %>%
     mutate(educvar = q16hiedu)%>%
     mutate(incomecategory = q23salc)
 
 #> 2011 data ----
-person_2011 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2011_data/zaf-statssa-ghs-2011-person-v1.2.csv", header = TRUE) %>% rename_with(tolower)%>%
+person_2011 <- read.csv("data/raw/ghs_2011_person.csv", header = TRUE) %>% rename_with(tolower)%>%
     mutate(salary = q22asto) %>%
     mutate(salperiod = q22bsp) %>%
     mutate(educvar = q16hiedu) %>%
     mutate(incomecategory = q23salc)
 
 #> 2012 data ----
-person_2012 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2012_data/zaf-statssa-ghs-2012-person-v2.1.csv", header = TRUE) %>% rename_with(tolower)%>%
+person_2012 <- read.csv("data/raw/ghs_2012_person.csv", header = TRUE) %>% rename_with(tolower)%>%
     mutate(salary = q22asto) %>%
     mutate(salperiod = q22bsp) %>%
     mutate(educvar = q16hiedu)%>%
     mutate(incomecategory = q23salc)
 
 #> 2013 data ----
-person_2013 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2013_data/zaf-statssa-ghs-2013-person-v1.1.csv", header = TRUE) %>% rename_with(tolower)%>%
+person_2013 <- read.csv("data/raw/ghs_2013_person.csv", header = TRUE) %>% rename_with(tolower)%>%
     mutate(salary = q42asto) %>%
     mutate(salperiod = q42bsp) %>%
     mutate(educvar = q16hiedu) %>%
     mutate(incomecategory = q43salc)
 
 #> 2014 data ----
-person_2014 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2014_data/GHS 2014 Person v1.1 CSV.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2014 <- read.csv("data/raw/ghs_2014_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q42asto) %>%
     mutate(salperiod = q42bsp) %>%
     mutate(educvar = q15hiedu)%>%
     mutate(incomecategory = q43salc)
 
 #> 2015 data ----
-person_2015 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2015_data/GHS 2015 Person v1.2 CSV.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2015 <- read.csv("data/raw/ghs_2015_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q42asto) %>%
     mutate(salperiod = q42bsp) %>%
     mutate(educvar = q15hiedu)%>%
     mutate(incomecategory = q43salc)
 
 #> 2016 data ----
-person_2016 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2016_data/GHS2016Person.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2016 <- read.csv("data/raw/ghs_2016_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q42asto) %>%
     mutate(salperiod = q42bsp) %>%
     mutate(educvar = q15hiedu)%>%
     mutate(incomecategory = q43salc)
 
 #> 2017 data ----
-person_2017 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2017_data/GHS 2017 Person v1.0 CSV.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2017 <- read.csv("data/raw/ghs_2017_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q42asto) %>%
     mutate(salperiod = q42bsp) %>%
     mutate(educvar = q15hiedu)%>%
     mutate(incomecategory = q43salc)
 
 #> 2018 data ----
-person_2018 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2018_data/ghs-2018-person-1.0-csv.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2018 <- read.csv("data/raw/ghs_2018_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q42asto) %>%
     mutate(salperiod = q42bsp) %>%
     mutate(educvar = q15hiedu)%>%
     mutate(incomecategory = q43salc)
 
 #> 2019 data ----
-person_2019 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2019_data/zaf-statssa-ghs-2019-person-v1-csv.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2019 <- read.csv("data/raw/ghs_2019_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = lab_sto) %>%
     mutate(salperiod = lab_salper) %>%
     mutate(educvar = education) %>%
@@ -161,7 +161,7 @@ person_2019 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2019_
     mutate(incomecategory = lab_salc)
 
 #> 2020 data ----
-person_2020 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2020_data/ghs-2020-person-v1.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2020 <- read.csv("data/raw/ghs_2020_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = lab_sto) %>%
     mutate(salperiod = lab_salper) %>%
     mutate(educvar = education) %>%
@@ -170,7 +170,7 @@ person_2020 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2020_
     mutate(incomecategory = lab_salc)
 
 #> 2021 data ----
-person_2021 <- read.csv("/Users/mac/Desktop/race_wage_gap_ghs/data/raw/ghs_2021_data/ghs-2021-person-v1.csv", header = TRUE) %>% rename_with(tolower) %>%
+person_2021 <- read.csv("data/raw/ghs_2021_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = lab_sto) %>%
     mutate(salperiod = lab_salper) %>%
     mutate(educvar = education) %>%
