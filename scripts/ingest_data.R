@@ -9,6 +9,14 @@
 # variable names and labels. Finally, the harmonised data frames are joined into
 # a single analysis data frame.
 
+
+# PROCESS ====
+# Run salary_category_tables.R
+# Run educ_tables.R
+# Run function_ingest_overall.R
+# Run this script.
+
+
 # INITIALISE ====
 
 # Load packages ----
@@ -30,10 +38,10 @@ person_2002 <- read.csv("data/raw/ghs_2002_person.csv", header = TRUE) %>% renam
 worker_2003 <- read.csv("data/raw/ghs_2003_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(salary = q28salto) %>%
     mutate(salperiod = q29salpe) %>%
-    mutate(incomecategory = q210salc)
+    mutate(incomecategory = q210salc) 
 
 person_2003 <- read.csv("data/raw/ghs_2003_person.csv", header = TRUE) %>% rename_with(tolower) %>%
-    mutate(educvar = q110hied)
+     mutate(educvar = q110hied) 
 
 #> 2004 data ----
 worker_2004 <- read.csv("data/raw/ghs_2004_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
@@ -181,46 +189,46 @@ person_2021 <- read.csv("data/raw/ghs_2021_person.csv", header = TRUE) %>% renam
 
 # WRANGLE DATA ====
 
-pooled_2002 <- ingest_2002_2008(person_2002, worker_2002, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2002)
+pooled_2002 <- ingest_2002_2008(person_2002, worker_2002, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2002)
 
-pooled_2003 <- ingest_2002_2008(person_2003, worker_2003, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2003)
+pooled_2003 <- ingest_2002_2008(person_2003, worker_2003, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2003)
 
-pooled_2004 <- ingest_2002_2008(person_2004, worker_2004, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2004)
+pooled_2004 <- ingest_2002_2008(person_2004, worker_2004, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2004)
 
-pooled_2005 <- ingest_2002_2008(person_2005, worker_2005, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2005)
+pooled_2005 <- ingest_2002_2008(person_2005, worker_2005, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2005)
 
-pooled_2006 <- ingest_2002_2008(person_2006, worker_2006, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2006)
+pooled_2006 <- ingest_2002_2008(person_2006, worker_2006, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2006)
 
-pooled_2007 <- ingest_2002_2008(person_2007, worker_2007, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2007)
+pooled_2007 <- ingest_2002_2008(person_2007, worker_2007, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2007)
 
-pooled_2008 <- ingest_2002_2008(person_2008, worker_2008, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2008)
+pooled_2008 <- ingest_2002_2008(person_2008, worker_2008, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2008)
 
 # Uses new function from here
-pooled_2009 <- ingest_2009_2014(person_2009, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2009)
+pooled_2009 <- ingest_2009_2014(person_2009, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2009)
 
-pooled_2010 <- ingest_2009_2014(person_2010, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2010)
+pooled_2010 <- ingest_2009_2014(person_2010, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2010)
 
-pooled_2011 <- ingest_2009_2014(person_2011, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2011)
+pooled_2011 <- ingest_2009_2014(person_2011, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2011)
 
-pooled_2012 <- ingest_2009_2014(person_2012, age, salary, salary_categories_table = salarycategories_2002_2012, salperiod, educvar, recoding_table = recoding_educ_2012)
+pooled_2012 <- ingest_2009_2014(person_2012, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2012)
 
-pooled_2013 <- ingest_2009_2014(person_2013, age, salary, salperiod, educvar, recoding_table = recoding_educ_2013)
+pooled_2013 <- ingest_2009_2014(person_2013, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2013)
 
-pooled_2014 <- ingest_2009_2014(person_2014, age, salary, salperiod, educvar, recoding_table = recoding_educ_2014)
+pooled_2014 <- ingest_2009_2014(person_2014, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2014)
 
-pooled_2015 <- ingest_2015_2018(person_2015, age, salary, salperiod, educvar, recoding_table = recoding_educ_2015)
+pooled_2015 <- ingest_2015_2018(person_2015, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2015)
 
-pooled_2016 <- ingest_2015_2018(person_2016, age, salary, salperiod, educvar, recoding_table = recoding_educ_2016)
+pooled_2016 <- ingest_2015_2018(person_2016, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2016)
 
-pooled_2017 <- ingest_2015_2018(person_2017, age, salary, salperiod, educvar, recoding_table = recoding_educ_2017)
+pooled_2017 <- ingest_2015_2018(person_2017, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2017)
 
-pooled_2018 <- ingest_2015_2018(person_2018, age, salary, salperiod, educvar, recoding_table = recoding_educ_2018)
+pooled_2018 <- ingest_2015_2018(person_2018, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2018)
 
-pooled_2019 <- ingest_2019_2021(person_2019, age, salary, salperiod, educvar, recoding_table = recoding_educ_2019)
+pooled_2019 <- ingest_2019_2021(person_2019, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2019)
 
-pooled_2020 <- ingest_2019_2021(person_2020, age, salary, salperiod, educvar, recoding_table = recoding_educ_2020)
+pooled_2020 <- ingest_2019_2021(person_2020, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2020)
 
-pooled_2021 <- ingest_2019_2021(person_2021, age, salary, salperiod, educvar, recoding_table = recoding_educ_2021)
+pooled_2021 <- ingest_2019_2021(person_2021, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2021)
 
 # TEST REGRESSION ====
 
@@ -229,8 +237,11 @@ lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2002) %>%
     summary()
 
 #> 2003 data ----
+contrasts(pooled_2003$race) <- contr.treatment(4) 
 lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2003) %>%
     summary()
+## Factor error
+
 
 #> 2004 data ----
 lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2004) %>%
@@ -283,6 +294,7 @@ lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2014) %>%
     summary()
 ## ERROR
 ## Log(0) = -Inf
+## Factor error
 
 #> 2015 data ----
 lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2015) %>%
