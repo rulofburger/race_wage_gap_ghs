@@ -1,7 +1,7 @@
 ## Salary Category Tables
 library(tidyverse)
 
-## 2002 to 2012 ---
+## 2002 to 2021 ---
 
 salarycategories_2002_2021 <- data.frame(
     incomecategory = 1:16,
