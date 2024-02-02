@@ -3,7 +3,7 @@ library(tidyverse)
 
 ## 2002 to 2012 ---
 
-salarycategories_2002_2012 <- data.frame(
+salarycategories_2002_2021 <- data.frame(
     incomecategory = 1:16,
     periodweekly = c("none", "1-46","47-115","116-231","232-346","347-577","578-808","809-1039","1040-1386","1387-1848","1849-2540","2541-3695","3696-6928","6929 or more", "don't know", "refuse"),
     periodmonthly = c(
@@ -38,4 +38,5 @@ salarycategories_2002_2012 <- data.frame(
     mutate(incomecategory = as.character(incomecategory)
            )
 
+# Only from 2019 are the categories different, but even then -- only the daily categories. Monthly and annually are the same.
 
