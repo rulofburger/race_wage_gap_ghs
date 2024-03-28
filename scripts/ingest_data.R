@@ -203,7 +203,6 @@ pooled_2007 <- ingest_2002_2008(person_2007, worker_2007, age, salary, salary_ca
 
 pooled_2008 <- ingest_2002_2008(person_2008, worker_2008, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2008)
 
-# Uses new function from here
 pooled_2009 <- ingest_2009_2014(person_2009, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2009)
 
 pooled_2010 <- ingest_2009_2014(person_2010, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2010)
@@ -233,97 +232,87 @@ pooled_2021 <- ingest_2019_2021(person_2021, age, salary, salary_categories_tabl
 # TEST REGRESSION ====
 
 #> 2002 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2002) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2002) %>%
     summary()
+## Error: Inf in y 
+## Salary categories currently coded with Inf as upper bound of higher category
 
 #> 2003 data ----
 contrasts(pooled_2003$race) <- contr.treatment(4) 
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2003) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2003) %>%
     summary()
 ## Factor error
 
 
 #> 2004 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2004) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2004) %>%
     summary()
 
 #> 2005 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2005) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2005) %>%
     summary()
 
 #> 2006 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2006) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2006) %>%
     summary()
 
 #> 2007 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2007) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2007) %>%
     summary()
 
 #> 2008 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2008) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2008) %>%
     summary()
 
 #> 2009 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2009) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2009) %>%
     summary()
 
 #> 2010 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2010) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2010) %>%
     summary()
 
 #> 2011 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2011) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2011) %>%
     summary()
-## ERROR
-## Log(0) = -Inf
 
 #> 2012 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2012) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2012) %>%
     summary()
-## ERROR
-## Log(0) = -Inf
 
 #> 2013 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2013) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2013) %>%
     summary()
-## ERROR
-## Log(0) = -Inf
 
 #> 2014 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2014) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2014) %>%
     summary()
-## ERROR
-## Log(0) = -Inf
 ## Factor error
 
 #> 2015 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2015) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2015) %>%
     summary()
-## ERROR
-## Log(0) = -Inf
 
 #> 2016 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2016) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2016) %>%
     summary()
 
 #> 2017 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2017) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2017) %>%
     summary()
-## ERROR
-## Log(0) = -Inf
 
 #> 2018 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2018) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2018) %>%
     summary()
 
 #> 2019 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2019) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2019) %>%
     summary()
 
 #> 2020 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2020) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2020) %>%
     summary()
 
 #> 2021 data ----
-lm(logsal ~ race + educ + age + age_sq + female, data = pooled_2021) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2021) %>%
     summary()

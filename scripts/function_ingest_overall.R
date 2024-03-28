@@ -22,7 +22,8 @@ ingest_2002_2008 <- function(df1, df2, age, salary, salary_categories_table, sal
         mutate(imputedsal = case_when(
             is.na(msal) ~ monthlymidpoint,
             TRUE ~ msal
-        ))
+        )) %>%
+      mutate(logimputedsal = log(imputedsal))
 
     return(pooled)}
 
@@ -53,7 +54,8 @@ ingest_2009_2014 <- function(df1, age, salary, salary_categories_table, salperio
         mutate(imputedsal = case_when(
           is.na(msal) ~ monthlymidpoint,
           TRUE ~ msal
-        ))
+        )) %>%
+        mutate(logimputedsal = log(imputedsal))
 
     return(pooled)}
 
@@ -83,7 +85,8 @@ ingest_2015_2018 <- function(df1, age, salary, salperiod, salary_categories_tabl
         mutate(imputedsal = case_when(
           is.na(msal) ~ monthlymidpoint,
           TRUE ~ msal
-       ))
+       )) %>%
+      mutate(logimputedsal = log(imputedsal))
 
     return(pooled)}
 
@@ -112,7 +115,8 @@ ingest_2019_2021 <- function(df1, age, salary, salperiod, salary_categories_tabl
         mutate(imputedsal = case_when(
           is.na(msal) ~ monthlymidpoint,
           TRUE ~ msal
-       ))
+       )) %>%
+      mutate(logimputedsal = log(imputedsal))
 
     return(pooled)}
 
