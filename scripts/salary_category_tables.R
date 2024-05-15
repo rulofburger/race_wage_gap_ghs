@@ -30,7 +30,7 @@ salarycategories_2002_2021 <- data.frame(
         ),
         monthly_upper_bound = case_when(
             monthly_upper_bound == "none" | monthly_upper_bound == "don't know" | monthly_upper_bound == "refuse" ~ NA_real_,
-            periodmonthly == "30001 or more" ~ Inf,
+            periodmonthly == "30001 or more" ~ 45000,
             TRUE ~ as.numeric(monthly_upper_bound)
         )
     ) %>%

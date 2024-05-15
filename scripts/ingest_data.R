@@ -34,14 +34,26 @@ worker_2002 <- read.csv("data/raw/ghs_2002_worker.csv", header = TRUE) %>% renam
 person_2002 <- read.csv("data/raw/ghs_2002_person.csv", header = TRUE) %>% rename_with(tolower) %>%
     mutate(educvar = q110hied)
 
-#> 2003 data ----
-worker_2003 <- read.csv("data/raw/ghs_2003_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
-    mutate(salary = q28salto) %>%
-    mutate(salperiod = q29salpe) %>%
-    mutate(incomecategory = q210salc) 
-
-person_2003 <- read.csv("data/raw/ghs_2003_person.csv", header = TRUE) %>% rename_with(tolower) %>%
-     mutate(educvar = q110hied) 
+# #> 2003 data ----
+# worker_2003 <- read.csv("data/raw/ghs_2003_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
+#     mutate(salary = q28salto) %>%
+#     mutate(salperiod = q29salpe) %>%
+#     mutate(incomecategory = q210salc) %>%
+#     mutate(uqnr = ifelse(str_detect(uqnr, "e"), 
+#                        format(as.numeric(uqnr), scientific = FALSE), 
+#                        uqnr)) 
+# 
+# worker_2003$uqnr <- as.character(worker_2003$uqnr)
+# 
+# person_2003 <- read.csv("data/raw/ghs_2003_person.csv", header = TRUE) %>% rename_with(tolower) %>%
+#      mutate(educvar = q110hied) 
+# 
+# person_2003$uqnr <- as.character(person_2003$uqnr)
+# 
+# person_2003 <- person_2003 %>%
+#   mutate(uqnr = ifelse(str_detect(uqnr, "e"), 
+#                        format(as.numeric(uqnr), scientific = FALSE), 
+#                        uqnr)) 
 
 #> 2004 data ----
 worker_2004 <- read.csv("data/raw/ghs_2004_worker.csv", header = TRUE) %>% rename_with(tolower) %>%
@@ -191,7 +203,7 @@ person_2021 <- read.csv("data/raw/ghs_2021_person.csv", header = TRUE) %>% renam
 
 pooled_2002 <- ingest_2002_2008(person_2002, worker_2002, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2002)
 
-pooled_2003 <- ingest_2002_2008(person_2003, worker_2003, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2003)
+# pooled_2003 <- ingest_2002_2008(person_2003, worker_2003, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2003)
 
 pooled_2004 <- ingest_2002_2008(person_2004, worker_2004, age, salary, salary_categories_table = salarycategories_2002_2021, salperiod, educvar, recoding_table = recoding_educ_2004)
 
@@ -232,87 +244,84 @@ pooled_2021 <- ingest_2019_2021(person_2021, age, salary, salary_categories_tabl
 # TEST REGRESSION ====
 
 #> 2002 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2002) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2002 %>% filter(imputedsal > 0)) %>%
     summary()
-## Error: Inf in y 
-## Salary categories currently coded with Inf as upper bound of higher category
 
-#> 2003 data ----
-contrasts(pooled_2003$race) <- contr.treatment(4) 
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2003) %>%
-    summary()
-## Factor error
+# #> 2003 data ----
+# contrasts(pooled_2003$race) <- contr.treatment(4) 
+# lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2003 %>% filter(imputedsal > 0)) %>%
+#     summary()
+# ## Factor error
 
 
 #> 2004 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2004) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2004 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2005 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2005) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2005 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2006 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2006) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2006 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2007 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2007) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2007 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2008 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2008) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2008 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2009 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2009) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2009 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2010 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2010) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2010 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2011 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2011) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2011 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2012 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2012) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2012 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2013 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2013) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2013 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2014 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2014) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2014 %>% filter(imputedsal > 0)) %>%
     summary()
-## Factor error
 
 #> 2015 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2015) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2015 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2016 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2016) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2016 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2017 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2017) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2017 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2018 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2018) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2018 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2019 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2019) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2019 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2020 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2020) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2020 %>% filter(imputedsal > 0)) %>%
     summary()
 
 #> 2021 data ----
-lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2021) %>%
+lm(logimputedsal ~ race + educ + age + age_sq + female, data = pooled_2021 %>% filter(imputedsal > 0)) %>%
     summary()
